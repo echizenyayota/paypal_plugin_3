@@ -20,11 +20,20 @@ function paypal_scripts() {
 add_action( 'wp_enqueue_scripts', 'paypal_scripts' );
 
 // ショートコードとオプションによるPayPalボタンの表示
-function paypaldiv_func(){
+function paypaldiv_func( $atts ){
+
+  $config = shortcode_atts( array(
+    'id' => '',
+    'total' => '0',
+		'currency' => '',
+    'env' => 'sandbox',
+    'color' => '',
+		'size' => '',
+	), $atts );
 
   $token = "sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'";
 
-  $paypaldiv = '<div id="paypal-button-container"></div>';
+  $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
 			env: 'sandbox',
@@ -32,15 +41,15 @@ function paypaldiv_func(){
 				{$token},
 			},
 			style: {
-				color: 'blue',
-				size: 'small',
+				color: '$config[color]',
+				size: '$config[size]',
 			},
 			commit: true,
 			payment: function(data, actions) {
 				return actions.payment.create({
 					payment: {
 						transactions: [{
-							amount: { total: '1000', currency: 'JPY' }
+							amount: { total: '$config[total]', currency: '$config[currency]' }
 						}]
 					}
 				});
@@ -50,7 +59,7 @@ function paypaldiv_func(){
 					window.alert('Payment Complete!');
 				});
 			}
-		}, '#paypal-button-container');
+		}, '#$config[id]');
 	</script>";
 
   // スクリプトの記述が表示される
