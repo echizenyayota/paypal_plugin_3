@@ -31,6 +31,9 @@ function paypaldiv_func( $atts ){
 		'size' => '',
 	), $atts );
 
+  // id、価格、通貨のいずれかがない場合は実行終了
+  if ( !$config['id'] || $config['total'] === '0' || !$config['currency'] ) return;
+
   $token = "sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'";
 
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
