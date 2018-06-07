@@ -21,12 +21,15 @@ add_action( 'wp_enqueue_scripts', 'paypal_scripts' );
 
 // ショートコードとオプションによるPayPalボタンの表示
 function paypaldiv_func(){
+
+  $token = "sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'";
+
   $paypaldiv = '<div id="paypal-button-container"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
 			env: 'sandbox',
 			client: {
-				'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+				{$token},
 			},
 			style: {
 				color: 'blue',
