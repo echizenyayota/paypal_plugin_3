@@ -36,7 +36,7 @@ function paypaldiv_func( $atts ){
 
   // 実行環境によって使用するトークンを変更する
   if ( $config['env'] === 'sandbox' ) {
-    $token = "sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'";
+    $token = "sandbox: 'AfR9ixd9WEAupinH5Mo1cu7muCTxagyXLVw_akjHYUKI2XU-9oYIj9oVrF8h_O9qRoIOyvIFnCEtFQnS'";
   } elseif ( $config['env'] === 'production' ) {
     $token = "production: 'input your production token'";
   }
@@ -74,3 +74,11 @@ function paypaldiv_func( $atts ){
   return $paypaldiv;
 }
 add_shortcode( 'paypaldiv', 'paypaldiv_func' );
+
+// 管理画面の表示
+function paypalexpresscheckout_add_admin_menu(){
+    add_submenu_page('plugins.php','PayPal Express Checkoutの設定','PayPal Express Checkoutの設定', 'administrator', __FILE__, 'paypalexpresscheckout_admin_menu');
+}
+add_action('admin_menu', 'paypalexpresscheckout_add_admin_menu');
+
+require_once(__DIR__ . '/express_admin.php');
