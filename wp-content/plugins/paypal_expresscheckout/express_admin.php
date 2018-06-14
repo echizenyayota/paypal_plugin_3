@@ -8,7 +8,7 @@
       <table class="form-table">
         <tr valign="top">
         <th scope="row">Client ID</th>
-        <td><input type="text" name="client" value="<?php echo esc_attr( get_option('client') ); ?>" /></td>
+        <td><input type="text" name="client" size="90" value="<?php echo esc_attr( get_option('client') ); ?>" /></td>
         </tr>
       </table>
     </form>
