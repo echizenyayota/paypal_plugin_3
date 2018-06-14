@@ -34,13 +34,8 @@ function paypaldiv_func( $atts ){
   // id、価格、通貨のいずれかがない場合は実行終了
   if ( !$config['id'] || $config['total'] === '0' || !$config['currency'] ) return;
 
-  // 実行環境によって使用するトークンを変更する
-  if ( $config['env'] === 'sandbox' ) {
-    $token = "sandbox: 'AfR9ixd9WEAupinH5Mo1cu7muCTxagyXLVw_akjHYUKI2XU-9oYIj9oVrF8h_O9qRoIOyvIFnCEtFQnS'";
-  } elseif ( $config['env'] === 'production' ) {
-    $token = "production: 'input your production token'";
-  }
-
+  $token = "sandbox: 'AfR9ixd9WEAupinH5Mo1cu7muCTxagyXLVw_akjHYUKI2XU-9oYIj9oVrF8h_O9qRoIOyvIFnCEtFQnS'";
+  
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
