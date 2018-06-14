@@ -1,6 +1,9 @@
-<?php
+<?php function paypalexpresscheckout_admin_menu() { ?>
 
-function paypalexpresscheckout_admin_menu() {
-  // echo "Hello World";
-  
-}
+  <div class="wrap">
+    <h2>PayPal ExpressCheckout Settings Page</h2>
+
+    <?php submit_button(); ?>
+  </div>
+
+<?php } ?>

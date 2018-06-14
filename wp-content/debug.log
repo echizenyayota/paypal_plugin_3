@@ -24,3 +24,4 @@
 [07-Jun-2018 22:51:15 UTC] PHP  13. preg_replace_callback() /var/www/wordpress/wp-includes/shortcodes.php:197
 [07-Jun-2018 22:51:15 UTC] PHP  14. do_shortcode_tag() /var/www/wordpress/wp-includes/shortcodes.php:197
 [07-Jun-2018 22:51:15 UTC] PHP  15. paypaldiv_func() /var/www/wordpress/wp-includes/shortcodes.php:319
+[14-Jun-2018 05:22:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express_admin.php on line 10

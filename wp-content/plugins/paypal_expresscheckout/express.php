@@ -35,7 +35,7 @@ function paypaldiv_func( $atts ){
   if ( !$config['id'] || $config['total'] === '0' || !$config['currency'] ) return;
 
   $token = "sandbox: 'AfR9ixd9WEAupinH5Mo1cu7muCTxagyXLVw_akjHYUKI2XU-9oYIj9oVrF8h_O9qRoIOyvIFnCEtFQnS'";
-  
+
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
@@ -75,5 +75,10 @@ function paypalexpresscheckout_add_admin_menu(){
     add_submenu_page('plugins.php','PayPal Express Checkoutの設定','PayPal Express Checkoutの設定', 'administrator', __FILE__, 'paypalexpresscheckout_admin_menu');
 }
 add_action('admin_menu', 'paypalexpresscheckout_add_admin_menu');
+
+// コールバック関数
+function register_paypalsettings() {
+	register_setting( 'paypal-settings-group', 'client' );
+}
 
 require_once(__DIR__ . '/express_admin.php');
