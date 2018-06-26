@@ -36,12 +36,9 @@ function paypaldiv_func( $atts ){
 
   // $token = "sandbox: 'AfR9ixd9WEAupinH5Mo1cu7muCTxagyXLVw_akjHYUKI2XU-9oYIj9oVrF8h_O9qRoIOyvIFnCEtFQnS'";
   // var_dump($token);
-
   $clientid = get_option('client');
-  var_dump($clientid);
   $token = "sandbox: '{$clientid}'";
-  var_dump($token);
-
+  
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
