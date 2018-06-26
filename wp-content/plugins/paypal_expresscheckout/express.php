@@ -34,11 +34,9 @@ function paypaldiv_func( $atts ){
   // id、価格、通貨のいずれかがない場合は実行終了
   if ( !$config['id'] || $config['total'] === '0' || !$config['currency'] ) return;
 
-  // $token = "sandbox: 'AfR9ixd9WEAupinH5Mo1cu7muCTxagyXLVw_akjHYUKI2XU-9oYIj9oVrF8h_O9qRoIOyvIFnCEtFQnS'";
-  // var_dump($token);
   $clientid = get_option('client');
   $token = "sandbox: '{$clientid}'";
-  
+
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
