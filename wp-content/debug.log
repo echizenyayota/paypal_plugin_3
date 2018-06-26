@@ -25,3 +25,14 @@
 [07-Jun-2018 22:51:15 UTC] PHP  14. do_shortcode_tag() /var/www/wordpress/wp-includes/shortcodes.php:197
 [07-Jun-2018 22:51:15 UTC] PHP  15. paypaldiv_func() /var/www/wordpress/wp-includes/shortcodes.php:319
 [14-Jun-2018 05:22:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express_admin.php on line 10
+[26-Jun-2018 09:46:05 UTC] PHP Parse error:  syntax error, unexpected '$token' (T_VARIABLE) in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 39
+[26-Jun-2018 09:55:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function var_sump() in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php:38
+Stack trace:
+#0 /var/www/wordpress/wp-includes/shortcodes.php(319): paypaldiv_func(Array, '', 'paypaldiv')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /var/www/wordpress/wp-includes/shortcodes.php(197): preg_replace_callback('/\\[(\\[?)(paypal...', 'do_shortcode_ta...', '<p>\xE5\x80\x8B\xE4\xBA\xBA\xE3\x83\xAC\xE3\x83\x83...')
+#3 /var/www/wordpress/wp-includes/class-wp-hook.php(286): do_shortcode('<p>\xE5\x80\x8B\xE4\xBA\xBA\xE3\x83\xAC\xE3\x83\x83...')
+#4 /var/www/wordpress/wp-includes/plugin.php(203): WP_Hook->apply_filters('<p>\xE5\x80\x8B\xE4\xBA\xBA\xE3\x83\xAC\xE3\x83\x83...', Array)
+#5 /var/www/wordpress/wp-includes/post-template.php(240): apply_filters('the_content', '\xE5\x80\x8B\xE4\xBA\xBA\xE3\x83\xAC\xE3\x83\x83\xE3\x82\xB9...')
+#6 /var/www/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content.php(58): the_content('<span class="sc...')
+#7 /va in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 38
