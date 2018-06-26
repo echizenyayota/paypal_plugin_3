@@ -39,7 +39,7 @@ function paypaldiv_func( $atts ){
 
   $clientid = get_option('client');
   var_dump($clientid);
-  $token = "sandbox: '{$clientid}";
+  $token = "sandbox: '{$clientid}'";
   var_dump($token);
 
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
