@@ -34,6 +34,7 @@ function paypaldiv_func( $atts ){
   // id、価格、通貨のいずれかがない場合は実行終了
   if ( !$config['id'] || $config['total'] === '0' || !$config['currency'] ) return;
 
+  // clientidの抽出と代入
   $clientid = get_option('client');
   $token = "sandbox: '{$clientid}'";
 
