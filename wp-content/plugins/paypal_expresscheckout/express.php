@@ -34,9 +34,18 @@ function paypaldiv_func( $atts ){
   // id、価格、通貨のいずれかがない場合は実行終了
   if ( !$config['id'] || $config['total'] === '0' || !$config['currency'] ) return;
 
-  $dev = "'sandbox'";
-  $clientid = get_option('client');
-  $token = "sandbox: '{$clientid}'";
+  // 開発環境の切り替え
+  // if(get_option('sandbox')) {
+    $dev = "'sandbox'";
+    $clientid = get_option('client');
+    $token = "sandbox: '{$clientid}'";
+  // } elseif(get_option('production')) {
+  //   $dev = "'production'";
+  //   $clientid = get_option('client');
+  //   $token = "production: '{$clientid}'";
+  // } else {
+  //   return;
+  // }
 
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
@@ -82,6 +91,8 @@ add_action('admin_menu', 'paypalexpresscheckout_add_admin_menu');
 // コールバック関数
 function register_paypalsettings() {
 	register_setting( 'paypal-settings-group', 'client' );
+  register_setting( 'paypal-settings-group', 'sandbox' );
+  register_setting( 'paypal-settings-group', 'production' );
 }
 
 require_once(__DIR__ . '/express_admin.php');
