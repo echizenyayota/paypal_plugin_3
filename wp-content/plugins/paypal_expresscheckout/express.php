@@ -91,8 +91,7 @@ add_action('admin_menu', 'paypalexpresscheckout_add_admin_menu');
 // コールバック関数
 function register_paypalsettings() {
 	register_setting( 'paypal-settings-group', 'client' );
-  register_setting( 'paypal-settings-group', 'sandbox' );
-  register_setting( 'paypal-settings-group', 'production' );
+  register_setting( 'paypal-settings-group', 'env' );
 }
 
 require_once(__DIR__ . '/express_admin.php');
