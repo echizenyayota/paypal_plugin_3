@@ -36,3 +36,27 @@ Stack trace:
 #5 /var/www/wordpress/wp-includes/post-template.php(240): apply_filters('the_content', '\xE5\x80\x8B\xE4\xBA\xBA\xE3\x83\xAC\xE3\x83\x83\xE3\x82\xB9...')
 #6 /var/www/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content.php(58): the_content('<span class="sc...')
 #7 /va in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 38
+[26-Jun-2018 13:34:09 UTC] PHP Warning:  不明なエラーが発生しました。WordPress.org またはこのサーバーの設定に何か問題が起きている可能性があります。問題が解決しない場合は<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>に投稿してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /var/www/wordpress/wp-includes/update.php on line 155
+[26-Jun-2018 13:34:09 UTC] PHP Stack trace:
+[26-Jun-2018 13:34:09 UTC] PHP   1. {main}() /var/www/wordpress/wp-cron.php:0
+[26-Jun-2018 13:34:09 UTC] PHP   2. do_action_ref_array() /var/www/wordpress/wp-cron.php:126
+[26-Jun-2018 13:34:09 UTC] PHP   3. WP_Hook->do_action() /var/www/wordpress/wp-includes/plugin.php:515
+[26-Jun-2018 13:34:09 UTC] PHP   4. WP_Hook->apply_filters() /var/www/wordpress/wp-includes/class-wp-hook.php:310
+[26-Jun-2018 13:34:09 UTC] PHP   5. wp_version_check() /var/www/wordpress/wp-includes/class-wp-hook.php:286
+[26-Jun-2018 13:34:09 UTC] PHP   6. trigger_error() /var/www/wordpress/wp-includes/update.php:155
+[26-Jun-2018 13:34:09 UTC] PHP Warning:  不明なエラーが発生しました。WordPress.org またはこのサーバーの設定に何か問題が起きている可能性があります。問題が解決しない場合は<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>に投稿してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /var/www/wordpress/wp-includes/update.php on line 347
+[26-Jun-2018 13:34:09 UTC] PHP Stack trace:
+[26-Jun-2018 13:34:09 UTC] PHP   1. {main}() /var/www/wordpress/wp-cron.php:0
+[26-Jun-2018 13:34:09 UTC] PHP   2. do_action_ref_array() /var/www/wordpress/wp-cron.php:126
+[26-Jun-2018 13:34:09 UTC] PHP   3. WP_Hook->do_action() /var/www/wordpress/wp-includes/plugin.php:515
+[26-Jun-2018 13:34:09 UTC] PHP   4. WP_Hook->apply_filters() /var/www/wordpress/wp-includes/class-wp-hook.php:310
+[26-Jun-2018 13:34:09 UTC] PHP   5. wp_update_plugins() /var/www/wordpress/wp-includes/class-wp-hook.php:286
+[26-Jun-2018 13:34:09 UTC] PHP   6. trigger_error() /var/www/wordpress/wp-includes/update.php:347
+[26-Jun-2018 13:34:09 UTC] PHP Warning:  不明なエラーが発生しました。WordPress.org またはこのサーバーの設定に何か問題が起きている可能性があります。問題が解決しない場合は<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>に投稿してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /var/www/wordpress/wp-includes/update.php on line 529
+[26-Jun-2018 13:34:09 UTC] PHP Stack trace:
+[26-Jun-2018 13:34:09 UTC] PHP   1. {main}() /var/www/wordpress/wp-cron.php:0
+[26-Jun-2018 13:34:09 UTC] PHP   2. do_action_ref_array() /var/www/wordpress/wp-cron.php:126
+[26-Jun-2018 13:34:09 UTC] PHP   3. WP_Hook->do_action() /var/www/wordpress/wp-includes/plugin.php:515
+[26-Jun-2018 13:34:09 UTC] PHP   4. WP_Hook->apply_filters() /var/www/wordpress/wp-includes/class-wp-hook.php:310
+[26-Jun-2018 13:34:09 UTC] PHP   5. wp_update_themes() /var/www/wordpress/wp-includes/class-wp-hook.php:286
+[26-Jun-2018 13:34:09 UTC] PHP   6. trigger_error() /var/www/wordpress/wp-includes/update.php:529
