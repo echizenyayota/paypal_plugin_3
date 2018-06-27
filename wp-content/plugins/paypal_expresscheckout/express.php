@@ -34,18 +34,20 @@ function paypaldiv_func( $atts ){
   // id、価格、通貨のいずれかがない場合は実行終了
   if ( !$config['id'] || $config['total'] === '0' || !$config['currency'] ) return;
 
-  // 開発環境の切り替え
-  // if(get_option('sandbox')) {
+  // 実行環境の切り替え
+  if( 'sandbox' === get_option('env')) {
+    // テスト環境
     $dev = "'sandbox'";
     $clientid = get_option('client');
     $token = "sandbox: '{$clientid}'";
-  // } elseif(get_option('production')) {
-  //   $dev = "'production'";
-  //   $clientid = get_option('client');
-  //   $token = "production: '{$clientid}'";
-  // } else {
-  //   return;
-  // }
+  } elseif( 'production' === get_option('env')) {
+    // 本番環境
+    $dev = "'production'";
+    $clientid = get_option('client');
+    $token = "production: '{$clientid}'";
+  } else {
+    return;
+  }
 
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>

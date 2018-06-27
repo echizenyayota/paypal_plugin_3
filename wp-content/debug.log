@@ -75,3 +75,76 @@ Stack trace:
 [27-Jun-2018 05:58:55 UTC] PHP   6. _maybe_update_core() /var/www/wordpress/wp-includes/class-wp-hook.php:286
 [27-Jun-2018 05:58:55 UTC] PHP   7. wp_version_check() /var/www/wordpress/wp-includes/update.php:673
 [27-Jun-2018 05:58:55 UTC] PHP   8. trigger_error() /var/www/wordpress/wp-includes/update.php:155
+[27-Jun-2018 07:35:01 UTC] PHP Parse error:  syntax error, unexpected '=' in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 38
+[27-Jun-2018 07:36:25 UTC] PHP Notice:  Undefined variable: dev in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 54
+[27-Jun-2018 07:36:25 UTC] PHP Stack trace:
+[27-Jun-2018 07:36:25 UTC] PHP   1. {main}() /var/www/wordpress/index.php:0
+[27-Jun-2018 07:36:25 UTC] PHP   2. require() /var/www/wordpress/index.php:17
+[27-Jun-2018 07:36:25 UTC] PHP   3. require_once() /var/www/wordpress/wp-blog-header.php:19
+[27-Jun-2018 07:36:25 UTC] PHP   4. include() /var/www/wordpress/wp-includes/template-loader.php:74
+[27-Jun-2018 07:36:25 UTC] PHP   5. get_template_part() /var/www/wordpress/wp-content/themes/twentyseventeen/index.php:46
+[27-Jun-2018 07:36:25 UTC] PHP   6. locate_template() /var/www/wordpress/wp-includes/general-template.php:155
+[27-Jun-2018 07:36:25 UTC] PHP   7. load_template() /var/www/wordpress/wp-includes/template.php:647
+[27-Jun-2018 07:36:25 UTC] PHP   8. require() /var/www/wordpress/wp-includes/template.php:690
+[27-Jun-2018 07:36:25 UTC] PHP   9. the_content() /var/www/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content.php:58
+[27-Jun-2018 07:36:25 UTC] PHP  10. apply_filters() /var/www/wordpress/wp-includes/post-template.php:240
+[27-Jun-2018 07:36:25 UTC] PHP  11. WP_Hook->apply_filters() /var/www/wordpress/wp-includes/plugin.php:203
+[27-Jun-2018 07:36:25 UTC] PHP  12. do_shortcode() /var/www/wordpress/wp-includes/class-wp-hook.php:286
+[27-Jun-2018 07:36:25 UTC] PHP  13. preg_replace_callback() /var/www/wordpress/wp-includes/shortcodes.php:197
+[27-Jun-2018 07:36:25 UTC] PHP  14. do_shortcode_tag() /var/www/wordpress/wp-includes/shortcodes.php:197
+[27-Jun-2018 07:36:25 UTC] PHP  15. paypaldiv_func() /var/www/wordpress/wp-includes/shortcodes.php:319
+[27-Jun-2018 07:36:25 UTC] PHP Notice:  Undefined variable: token in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 56
+[27-Jun-2018 07:36:25 UTC] PHP Stack trace:
+[27-Jun-2018 07:36:25 UTC] PHP   1. {main}() /var/www/wordpress/index.php:0
+[27-Jun-2018 07:36:25 UTC] PHP   2. require() /var/www/wordpress/index.php:17
+[27-Jun-2018 07:36:25 UTC] PHP   3. require_once() /var/www/wordpress/wp-blog-header.php:19
+[27-Jun-2018 07:36:25 UTC] PHP   4. include() /var/www/wordpress/wp-includes/template-loader.php:74
+[27-Jun-2018 07:36:25 UTC] PHP   5. get_template_part() /var/www/wordpress/wp-content/themes/twentyseventeen/index.php:46
+[27-Jun-2018 07:36:25 UTC] PHP   6. locate_template() /var/www/wordpress/wp-includes/general-template.php:155
+[27-Jun-2018 07:36:25 UTC] PHP   7. load_template() /var/www/wordpress/wp-includes/template.php:647
+[27-Jun-2018 07:36:25 UTC] PHP   8. require() /var/www/wordpress/wp-includes/template.php:690
+[27-Jun-2018 07:36:25 UTC] PHP   9. the_content() /var/www/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content.php:58
+[27-Jun-2018 07:36:25 UTC] PHP  10. apply_filters() /var/www/wordpress/wp-includes/post-template.php:240
+[27-Jun-2018 07:36:25 UTC] PHP  11. WP_Hook->apply_filters() /var/www/wordpress/wp-includes/plugin.php:203
+[27-Jun-2018 07:36:25 UTC] PHP  12. do_shortcode() /var/www/wordpress/wp-includes/class-wp-hook.php:286
+[27-Jun-2018 07:36:25 UTC] PHP  13. preg_replace_callback() /var/www/wordpress/wp-includes/shortcodes.php:197
+[27-Jun-2018 07:36:25 UTC] PHP  14. do_shortcode_tag() /var/www/wordpress/wp-includes/shortcodes.php:197
+[27-Jun-2018 07:36:25 UTC] PHP  15. paypaldiv_func() /var/www/wordpress/wp-includes/shortcodes.php:319
+[27-Jun-2018 07:37:12 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 39
+[27-Jun-2018 07:37:48 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 39
+[27-Jun-2018 07:38:16 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 39
+[27-Jun-2018 07:38:47 UTC] PHP Parse error:  syntax error, unexpected '$paypaldiv' (T_VARIABLE) in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 51
+[27-Jun-2018 07:39:05 UTC] PHP Notice:  Undefined variable: dev in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 54
+[27-Jun-2018 07:39:05 UTC] PHP Stack trace:
+[27-Jun-2018 07:39:05 UTC] PHP   1. {main}() /var/www/wordpress/index.php:0
+[27-Jun-2018 07:39:05 UTC] PHP   2. require() /var/www/wordpress/index.php:17
+[27-Jun-2018 07:39:05 UTC] PHP   3. require_once() /var/www/wordpress/wp-blog-header.php:19
+[27-Jun-2018 07:39:05 UTC] PHP   4. include() /var/www/wordpress/wp-includes/template-loader.php:74
+[27-Jun-2018 07:39:05 UTC] PHP   5. get_template_part() /var/www/wordpress/wp-content/themes/twentyseventeen/index.php:46
+[27-Jun-2018 07:39:05 UTC] PHP   6. locate_template() /var/www/wordpress/wp-includes/general-template.php:155
+[27-Jun-2018 07:39:05 UTC] PHP   7. load_template() /var/www/wordpress/wp-includes/template.php:647
+[27-Jun-2018 07:39:05 UTC] PHP   8. require() /var/www/wordpress/wp-includes/template.php:690
+[27-Jun-2018 07:39:05 UTC] PHP   9. the_content() /var/www/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content.php:58
+[27-Jun-2018 07:39:05 UTC] PHP  10. apply_filters() /var/www/wordpress/wp-includes/post-template.php:240
+[27-Jun-2018 07:39:05 UTC] PHP  11. WP_Hook->apply_filters() /var/www/wordpress/wp-includes/plugin.php:203
+[27-Jun-2018 07:39:05 UTC] PHP  12. do_shortcode() /var/www/wordpress/wp-includes/class-wp-hook.php:286
+[27-Jun-2018 07:39:05 UTC] PHP  13. preg_replace_callback() /var/www/wordpress/wp-includes/shortcodes.php:197
+[27-Jun-2018 07:39:05 UTC] PHP  14. do_shortcode_tag() /var/www/wordpress/wp-includes/shortcodes.php:197
+[27-Jun-2018 07:39:05 UTC] PHP  15. paypaldiv_func() /var/www/wordpress/wp-includes/shortcodes.php:319
+[27-Jun-2018 07:39:05 UTC] PHP Notice:  Undefined variable: token in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 56
+[27-Jun-2018 07:39:05 UTC] PHP Stack trace:
+[27-Jun-2018 07:39:05 UTC] PHP   1. {main}() /var/www/wordpress/index.php:0
+[27-Jun-2018 07:39:05 UTC] PHP   2. require() /var/www/wordpress/index.php:17
+[27-Jun-2018 07:39:05 UTC] PHP   3. require_once() /var/www/wordpress/wp-blog-header.php:19
+[27-Jun-2018 07:39:05 UTC] PHP   4. include() /var/www/wordpress/wp-includes/template-loader.php:74
+[27-Jun-2018 07:39:05 UTC] PHP   5. get_template_part() /var/www/wordpress/wp-content/themes/twentyseventeen/index.php:46
+[27-Jun-2018 07:39:05 UTC] PHP   6. locate_template() /var/www/wordpress/wp-includes/general-template.php:155
+[27-Jun-2018 07:39:05 UTC] PHP   7. load_template() /var/www/wordpress/wp-includes/template.php:647
+[27-Jun-2018 07:39:05 UTC] PHP   8. require() /var/www/wordpress/wp-includes/template.php:690
+[27-Jun-2018 07:39:05 UTC] PHP   9. the_content() /var/www/wordpress/wp-content/themes/twentyseventeen/template-parts/post/content.php:58
+[27-Jun-2018 07:39:05 UTC] PHP  10. apply_filters() /var/www/wordpress/wp-includes/post-template.php:240
+[27-Jun-2018 07:39:05 UTC] PHP  11. WP_Hook->apply_filters() /var/www/wordpress/wp-includes/plugin.php:203
+[27-Jun-2018 07:39:05 UTC] PHP  12. do_shortcode() /var/www/wordpress/wp-includes/class-wp-hook.php:286
+[27-Jun-2018 07:39:05 UTC] PHP  13. preg_replace_callback() /var/www/wordpress/wp-includes/shortcodes.php:197
+[27-Jun-2018 07:39:05 UTC] PHP  14. do_shortcode_tag() /var/www/wordpress/wp-includes/shortcodes.php:197
+[27-Jun-2018 07:39:05 UTC] PHP  15. paypaldiv_func() /var/www/wordpress/wp-includes/shortcodes.php:319
