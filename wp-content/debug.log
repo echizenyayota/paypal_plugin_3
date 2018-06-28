@@ -148,3 +148,14 @@ Stack trace:
 [27-Jun-2018 07:39:05 UTC] PHP  13. preg_replace_callback() /var/www/wordpress/wp-includes/shortcodes.php:197
 [27-Jun-2018 07:39:05 UTC] PHP  14. do_shortcode_tag() /var/www/wordpress/wp-includes/shortcodes.php:197
 [27-Jun-2018 07:39:05 UTC] PHP  15. paypaldiv_func() /var/www/wordpress/wp-includes/shortcodes.php:319
+[28-Jun-2018 01:29:18 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/wordpress/wp-includes/wp-db.php on line 1531
+[28-Jun-2018 01:29:18 UTC] PHP Stack trace:
+[28-Jun-2018 01:29:18 UTC] PHP   1. {main}() /var/www/wordpress/index.php:0
+[28-Jun-2018 01:29:18 UTC] PHP   2. require() /var/www/wordpress/index.php:17
+[28-Jun-2018 01:29:18 UTC] PHP   3. require_once() /var/www/wordpress/wp-blog-header.php:13
+[28-Jun-2018 01:29:18 UTC] PHP   4. require_once() /var/www/wordpress/wp-load.php:37
+[28-Jun-2018 01:29:18 UTC] PHP   5. require_once() /var/www/wordpress/wp-config.php:77
+[28-Jun-2018 01:29:18 UTC] PHP   6. require_wp_db() /var/www/wordpress/wp-settings.php:106
+[28-Jun-2018 01:29:18 UTC] PHP   7. wpdb->__construct() /var/www/wordpress/wp-includes/load.php:404
+[28-Jun-2018 01:29:18 UTC] PHP   8. wpdb->db_connect() /var/www/wordpress/wp-includes/wp-db.php:592
+[28-Jun-2018 01:29:18 UTC] PHP   9. mysqli_real_connect() /var/www/wordpress/wp-includes/wp-db.php:1531
