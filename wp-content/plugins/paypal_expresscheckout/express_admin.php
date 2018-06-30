@@ -11,15 +11,15 @@
             <td>
               <p>
                 <select name="env" size="1">
-                  <option value="sandbox">sandbox</option>
-                  <option value="production">production</option>
+                  <option value="sandbox" <?php selected( get_option( 'env' ), 'sandbox' ); ?>>sandbox</option>
+                  <option value="production" <?php selected( get_option( 'env' ), 'production' ); ?>>production</option>
                 </select>
               </p>
             </td>
           </tr>
           <tr valign="top">
           <th scope="row">Client ID</th>
-          <td><input type="text" name="client" size="90" value="" /></td>
+          <td><input type="text" name="client" size="90" value="<?php echo esc_attr( get_option('client') ); ?>" /></td>
           </tr>
         </table>
         <?php submit_button(); ?>

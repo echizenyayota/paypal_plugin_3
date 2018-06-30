@@ -26,7 +26,6 @@ function paypaldiv_func( $atts ){
     'id' => '',
     'total' => '0',
 		'currency' => '',
-    'env' => 'sandbox',
     'color' => '',
 		'size' => '',
 	), $atts );
@@ -34,17 +33,32 @@ function paypaldiv_func( $atts ){
   // id、価格、通貨のいずれかがない場合は実行終了
   if ( !$config['id'] || $config['total'] === '0' || !$config['currency'] ) return;
 
-  // 実行環境によって使用するトークンを変更する
-  if ( $config['env'] === 'sandbox' ) {
-    $token = "sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'";
-  } elseif ( $config['env'] === 'production' ) {
-    $token = "production: 'input your production token'";
+  // // 実行環境によって使用するトークンを変更する
+  // if ( $config['env'] === 'sandbox' ) {
+  //   $token = "sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'";
+  // } elseif ( $config['env'] === 'production' ) {
+  //   $token = "production: 'input your production token'";
+  // }
+
+  // 実行環境の切り替え
+  if( 'sandbox' === get_option('env')) {
+    // テスト環境
+    $dev = "'sandbox'";
+    $clientid = get_option('client');
+    $token = "sandbox: '{$clientid}'";
+  } elseif( 'production' === get_option('env')) {
+    // 本番環境
+    $dev = "'production'";
+    $clientid = get_option('client');
+    $token = "production: '{$clientid}'";
+  } else {
+    return;
   }
 
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
-			env: 'sandbox',
+			env: {$dev},
 			client: {
 				{$token},
 			},
