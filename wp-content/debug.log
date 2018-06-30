@@ -159,3 +159,13 @@ Stack trace:
 [28-Jun-2018 01:29:18 UTC] PHP   7. wpdb->__construct() /var/www/wordpress/wp-includes/load.php:404
 [28-Jun-2018 01:29:18 UTC] PHP   8. wpdb->db_connect() /var/www/wordpress/wp-includes/wp-db.php:592
 [28-Jun-2018 01:29:18 UTC] PHP   9. mysqli_real_connect() /var/www/wordpress/wp-includes/wp-db.php:1531
+[30-Jun-2018 06:13:34 UTC] PHP Warning:  不明なエラーが発生しました。WordPress.org またはこのサーバーの設定に何か問題が起きている可能性があります。問題が解決しない場合は<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>に投稿してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /var/www/wordpress/wp-includes/update.php on line 155
+[30-Jun-2018 06:13:34 UTC] PHP Stack trace:
+[30-Jun-2018 06:13:34 UTC] PHP   1. {main}() /var/www/wordpress/wp-admin/plugins.php:0
+[30-Jun-2018 06:13:34 UTC] PHP   2. require_once() /var/www/wordpress/wp-admin/plugins.php:10
+[30-Jun-2018 06:13:34 UTC] PHP   3. do_action() /var/www/wordpress/wp-admin/admin.php:156
+[30-Jun-2018 06:13:34 UTC] PHP   4. WP_Hook->do_action() /var/www/wordpress/wp-includes/plugin.php:453
+[30-Jun-2018 06:13:34 UTC] PHP   5. WP_Hook->apply_filters() /var/www/wordpress/wp-includes/class-wp-hook.php:310
+[30-Jun-2018 06:13:34 UTC] PHP   6. _maybe_update_core() /var/www/wordpress/wp-includes/class-wp-hook.php:286
+[30-Jun-2018 06:13:34 UTC] PHP   7. wp_version_check() /var/www/wordpress/wp-includes/update.php:673
+[30-Jun-2018 06:13:34 UTC] PHP   8. trigger_error() /var/www/wordpress/wp-includes/update.php:155

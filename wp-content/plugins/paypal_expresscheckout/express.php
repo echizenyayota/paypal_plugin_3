@@ -26,7 +26,6 @@ function paypaldiv_func( $atts ){
     'id' => '',
     'total' => '0',
 		'currency' => '',
-    'env' => 'sandbox',
     'color' => '',
 		'size' => '',
 	), $atts );
